@@ -10,7 +10,7 @@ The engine solves one problem: after compaction, the next model must be able to 
 ## Upstream
 
 - **Base engine.** The built-in `@deepseek-ai/dsh-compaction-basic`, shipped with DeepSeek Harness. This package does not vendor or fork it; `resolve-host.js` borrows the running instance's copy and calls `super.summarize` for non-PTC sessions.
-- **Tool index.** `tool_inventory` is provided by the separate plugin [`@hrygo/dsh-ptc-tool-search`](https://github.com/hrygo/dsh-ptc-tool-search). This engine only reads that snapshot for `## Companion Status`; it does not install, load, or unload tools. Without the plugin the section records `unavailable` and the reason.
+- **Tool index.** `tool_inventory` is provided by the separate plugin [`@hrygo/dsh-ptc-tool-search`](https://github.com/hrygo/dsh-ptc-tool-search). The maintained fork used with this engine is [anne43983959/dsh-ptc-tool-search](https://github.com/anne43983959/dsh-ptc-tool-search). This engine only reads that snapshot for `## Companion Status`; it does not install, load, or unload tools. Without the plugin the section records `unavailable` and the reason.
 - **Host libraries.** `@deepseek-ai/dsh-tools` (`defineTool` for `memory_read`) and `@deepseek-ai/dsh-llm` (`BlockAssembler` / `LlmError` for the PTC summarization call).
 
 The engine does not modify the host, the preset, or the profile. It hooks the compaction slot through the alias package in the companion repository [`dsh-compaction-basic-alias`](https://github.com/anne43983959/dsh-compaction-basic-alias).
