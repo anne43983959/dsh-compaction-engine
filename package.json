@@ -1,0 +1,60 @@
+{
+  "name": "dsh-compaction-engine",
+  "version": "0.2.11",
+  "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./resolve-host": "./resolve-host.js"
+  },
+  "description": "PTC-only compaction checkpoint extension for DeepSeek Harness: full-context history-only checkpoints, Temporal Facts audit, State Boundary, one external review pass, and a hot-loaded prompt.",
+  "files": [
+    "index.js",
+    "resolve-host.js",
+    "v3.js",
+    "hot-prompt.js"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "MIT",
+  "author": "anne43983959",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anne43983959/dsh-compaction-engine.git"
+  },
+  "homepage": "https://github.com/anne43983959/dsh-compaction-engine#readme",
+  "bugs": {
+    "url": "https://github.com/anne43983959/dsh-compaction-engine/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "compaction",
+    "checkpoint",
+    "ptc"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.1-rc.5 <0.2.3-0",
+    "@deepseek-ai/dsh-compaction-basic": ">=0.2.1-rc.5 <0.2.3-0",
+    "@deepseek-ai/dsh-tools": ">=0.2.1-rc.5 <0.2.3-0",
+    "@deepseek-ai/dsh-llm": ">=0.2.1-rc.5 <0.2.3-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-compaction-basic": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-llm": {
+      "optional": true
+    }
+  }
+}
